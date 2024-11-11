@@ -1,0 +1,75 @@
+.serviceSidebar {
+  background: #fff;
+  width: 15%;
+  height: 100vh;
+  position: absolute;
+  top: 10;
+  padding-left: 2%;
+  padding-top: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a box shadow for better visibility */
+}
+
+.serviceSmallSidebar {
+  width: 5%;
+}
+
+.serviceShortcutLinks {
+  padding-top: 20px; /* Adjusted padding for better spacing */
+}
+
+.serviceSideLink {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.serviceSideLink p {
+  margin-left: 10px; /* Added margin between icon and text */
+}
+
+.serviceSideLinkActive {
+  color: #ff9101;
+  font-weight: 600;
+}
+
+.serviceSidebar hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 85%;
+  margin: 20px 0; /* Adjusted margin */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .serviceSidebar {
+    width: 30%; /* Adjusted width for smaller screens */
+  }
+  .serviceSmallSidebar {
+    width: 5%;
+  }
+}
+
+@media (max-width: 900px) {
+  /* .serviceSidebar {
+    display: none;
+  } */
+  .serviceSmallSidebar {
+    width: 10%;
+  }
+}
+
+/* Styling for the small-sidebar */
+.serviceSmallSidebar p {
+  display: none;
+}
+
+.serviceSmallSidebar h3 {
+  display: none;
+}
+
+.serviceSmallSidebar hr {
+  width: 50%;
+  margin-bottom: 25px;
+}

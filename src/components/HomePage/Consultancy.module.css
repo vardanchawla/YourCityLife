@@ -1,0 +1,65 @@
+/* Consultancy.module.css */
+
+.c-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 100%; /* Adjusted to fit within the page */
+  margin: 0 auto; /* Centers the component horizontally */
+  background-color: #fff0f0;
+}
+
+.c-wrapper h1 {
+  font-size: 2.5rem;
+}
+
+.c-wrapper span {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgb(60, 56, 56);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if space is insufficient */
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem; /* Adds space between each title */
+}
+
+.title {
+  flex: 1;
+  min-width: 150px; /* Ensures a minimum width for each title */
+}
+
+.title h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: rgb(60, 56, 56);
+}
+
+.title input {
+  width: 100%; /* Adjusted to take full width of parent */
+  padding: 10px;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.Submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff9101;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  align-self: center; /* Center-align the button */
+}
+
+.Submit-button:hover {
+  background-color: #0056b3;
+}

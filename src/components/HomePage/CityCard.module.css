@@ -1,0 +1,53 @@
+.city-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-image: var(--hover-image);
+  background-size: cover;
+  background-position: center;
+  transition: left 0.5s ease-in-out;
+}
+
+.city-card:hover::before {
+  left: 0;
+}
+
+.city-card .city-svg,
+.city-card .textComponent {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
+}
+
+.city-card:hover .city-svg,
+.city-card:hover .textComponent {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 500px) {
+  .city-card {
+    width: 6rem;
+  }
+
+  .citycontainer {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    gap: 2%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1024px) {
+  .citycontainer {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 2%;
+  }
+}

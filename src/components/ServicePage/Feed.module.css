@@ -1,0 +1,49 @@
+.feed::-webkit-scrollbar {
+  width: 10px;
+}
+.feed::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.feed::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 16px;
+  grid-row-gap: 30px;
+  margin-top: 15px;
+  padding: 50px;
+  height: 80vh;
+  overflow-y: scroll;
+  gap: 10%;
+}
+.feed-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.feed-card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 5px 0;
+}
+.feed-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin: 6px 0;
+}
+.feed-card p {
+  font-size: 14px;
+}
+.feed-card:hover {
+  color: black;
+}
+@media (max-width: 1200px) {
+  .feed {
+    overflow-x: hidden;
+  }
+}

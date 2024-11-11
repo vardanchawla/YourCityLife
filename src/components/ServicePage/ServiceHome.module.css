@@ -1,0 +1,24 @@
+/* ServiceHome.module.css */
+.serviceHomecontainer {
+  position: relative;
+}
+
+.serviceContainer {
+  background: #f9f9f9;
+  padding-left: 17%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100vh;
+}
+
+.serviceLargeContainer {
+  padding-left: 7%;
+}
+
+@media (max-width: 900px) {
+  .serviceLargeContainer,
+  .serviceContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

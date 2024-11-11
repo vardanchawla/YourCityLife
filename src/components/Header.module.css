@@ -1,0 +1,120 @@
+.h-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.h-menu > * {
+  position: relative;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.h-menu > *:not(button)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fdc063; /* Change line color on hover */
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.h-menu > *:not(button):hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.custom-gradient {
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 219, 47) 11.2%,
+    rgb(244, 253, 0) 100.2%
+  );
+  font-weight: 600;
+  font-size: 100%;
+  border-radius: 20px;
+  color: #151218;
+  transition: 3s ease;
+}
+.custom-gradient:hover {
+  transform: scale(1.1);
+}
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .h-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: #151218;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .h-menu.open {
+    display: flex;
+  }
+
+  .h-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .logo img {
+    width: 80px;
+  }
+
+  .h-container {
+    padding: 0.5rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .h-button {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .login-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 1rem;
+  }
+}
